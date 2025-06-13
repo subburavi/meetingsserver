@@ -1,10 +1,10 @@
 const { Pool } = require('pg');
 
 const pool = new Pool({
-  user: process.env.PGUSER || 'postgres',
-  host: process.env.PGHOST || 'localhost',
-  database: process.env.PGDATABASE || 'tutorshub',
-  password: process.env.PGPASSWORD || 'subburavi',
+  user: process.env.PGUSER || 'pretutors_user',
+  host: process.env.PGHOST || 'dpg-d15qfvidbo4c73c3urn0-a.render.com',
+  database: process.env.PGDATABASE || 'pretutors',
+  password: process.env.PGPASSWORD || 'xbyurhm8BGugTPC17336zxuTsaecJmpg',
   port: process.env.PGPORT || 5432,
 });
 
