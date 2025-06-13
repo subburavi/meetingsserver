@@ -2,10 +2,13 @@ const { Pool } = require('pg');
 
 const pool = new Pool({
   user: process.env.PGUSER || 'pretutors_user',
-  host: process.env.PGHOST || 'dpg-d15qfvidbo4c73c3urn0-a.render.com',
+  host: process.env.PGHOST || 'd15qfvidbo4c73c3urn0-a.oregon-postgres.render.com',
   database: process.env.PGDATABASE || 'pretutors',
   password: process.env.PGPASSWORD || 'xbyurhm8BGugTPC17336zxuTsaecJmpg',
   port: process.env.PGPORT || 5432,
+   ssl: {
+    rejectUnauthorized: false, // Required for Render's SSL
+  },
 });
 
 // Test the connection
